@@ -10,6 +10,7 @@ To use it do the following :
 *Open Your Browser*
 *Open the given link*
 *The web looks as following:- *
-![Uploading image.png…]()
+<img width="1000" height="460" alt="2Q (1)" src="https://github.com/user-attachments/assets/94155dda-0a7a-495f-bbde-b92008c22068" />
+
 
  Thank You And ENJOY!!
