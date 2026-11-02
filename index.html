@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="player">
+
+    <!-- LEFT SIDE -->
+    <aside class="sidebar">
+      <div class="logo">MUSIC</div>
+
+      <nav>
+        <button class="nav-item active">Home</button>
+        <button class="nav-item">Library</button>
+        <button class="nav-item">Liked Songs</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <p>YOUR PLAYLISTS</p>
+        <button class="playlist">Morning</button>
+        <button class="playlist">Favorites</button>
+        <button class="playlist">Chill</button>
+      </div>
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <header class="header">
+        <div>
+          <p class="small-title">NOW PLAYING</p>
+          <h1>Good music.</h1>
+        </div>
+
+        <label class="upload">
+          + Add music
+          <input id="musicInput" type="file" accept="audio/*" multiple>
+        </label>
+      </header>
+
+
+      <!-- PLAYER -->
+      <section class="now-playing">
+
+        <div class="album-container">
+          <div class="album" id="album">
+            <div class="album-center">
+              <span>♪</span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="song-info">
+
+          <p class="small-title">PLAYING</p>
+
+          <h2 id="songTitle">
+            Nothing playing
+          </h2>
+
+          <p id="artist">
+            Add a song to your library
+          </p>
+
+
+          <div class="progress-area">
+
+            <input
+              id="progress"
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+            >
+
+            <div class="time">
+              <span id="currentTime">0:00</span>
+              <span id="totalTime">0:00</span>
+            </div>
+
+          </div>
+
+
+          <div class="controls">
+
+            <button id="shuffle" title="Shuffle">
+              ↝
+            </button>
+
+            <button id="previous" title="Previous">
+              ◀
+            </button>
+
+            <button class="play-button" id="play">
+              ▶
+            </button>
+
+            <button id="next" title="Next">
+              ▶
+            </button>
+
+            <button id="repeat" title="Repeat">
+              ↻
+            </button>
+
+          </div>
+
+
+          <div class="volume">
+
+            <span>−</span>
+
+            <input
+              id="volume"
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value="0.8"
+            >
+
+            <span>+</span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- LIBRARY -->
+      <section class="library">
+
+        <div class="library-header">
+          <h3>Your music</h3>
+          <span id="songCount">0 songs</span>
+        </div>
+
+        <div id="songList" class="song-list">
+
+          <div class="empty">
+            Your library is empty.<br>
+            Add some music to get started.
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <audio id="audio"></audio>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
